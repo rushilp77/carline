@@ -23,7 +23,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
 
-public class main extends JFrame implements ActionListener {
+public class runner extends JFrame implements ActionListener {
 	
 	public static JTextArea[] names1=new JTextArea[6];
 	public static JTextArea[] names2=new JTextArea[6];
@@ -47,7 +47,7 @@ public class main extends JFrame implements ActionListener {
 
 
 	
-	public theonethatworks() throws Exception  {
+	public runner() throws Exception  {
 		
 
 		
@@ -209,7 +209,7 @@ public class main extends JFrame implements ActionListener {
 
 
 	public static void main(String[] args) throws Exception {
-		new theonethatworks();
+		new runner();
 		
 }
 	
@@ -266,9 +266,11 @@ public class main extends JFrame implements ActionListener {
 		try{
 			 y = bill.getInt("scan");
 				x= y/10;
+
+			 
 			if(checkdigit.check(y)) {
 			
-			if(x<scanner.list.size()&&x>0) {
+			if((x<scanner.list.size()&&x>0)||x==999) {
 				if(y!=prev) {
 					cone.cars.add(x-1);
 					l.addElement((x)+" " +sam.returnLast());
@@ -278,7 +280,7 @@ public class main extends JFrame implements ActionListener {
 					{System.out.println("The same barcode was scanned twice");
 				sound.playRepeated();}
 			}
-			else
+			else if (x!=999)
 				{System.out.println( x + ": Scan out of bounds. Please scan again");
 				sound.playError();}
 					}
