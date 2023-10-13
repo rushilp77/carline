@@ -23,7 +23,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
 
-public class theonethatworks extends JFrame implements ActionListener {
+public class main extends JFrame implements ActionListener {
 	
 	public static JTextArea[] names1=new JTextArea[6];
 	public static JTextArea[] names2=new JTextArea[6];
