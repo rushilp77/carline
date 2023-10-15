@@ -36,15 +36,15 @@ public class cone extends scanner {
 		int i = 0;
 
 		while (i<6&&i<cars.size()) {
-			if(cars.get(i)==998) {
+			if(cars.get(i)==898) {
 				toprint.add("Placeholder barcode scanned");
 				i++;
 			}
 			else if(cars.get(i)<0) {
 				toprint.add("Scanning problem");
 			}else {
-				toprint.add((list.get(cars.get(i)).student1+ ", "  +(list.get(cars.get(i)).student2))+ ", "+ (list.get(cars.get(i)).student3));	
-				i++;
+				toprint.add((list.get(cars.get(i)).students));
+						i++;
 			}
 		}
 
@@ -65,14 +65,14 @@ while(i<6&&cars.size()>0) {
 		ArrayList<String> toprint = new ArrayList<String>();
 		int i = 6;
 		while (i<12&&i<cars.size()) {
-			if(cars.get(i)==998) {
+			if(cars.get(i)==898) {
 				toprint.add("Placeholder barcode scanned");
 				i++;
 			}
 			else if(cars.get(i)<0) {
 				toprint.add("Scanning problem");
 			}else {
-				toprint.add((list.get(cars.get(i)).student1+ ", "  +(list.get(cars.get(i)).student2))+ ", "+ (list.get(cars.get(i)).student3));	
+				toprint.add((list.get(cars.get(i)).students));	
 				i++;
 			}
 		}
@@ -82,10 +82,10 @@ while(i<6&&cars.size()>0) {
 	
 	
 	public String returnLast() {
-		if (cars.get(cars.size()-1)==998) {
+		if (cars.get(cars.size()-1)==898) {
 			return ("Placeholder barcode scanned");
 		}
-		return(list.get(cars.get(cars.size()-1)).student1+ ", "  +(list.get(cars.get(cars.size()-1)).student2))+ ", "+ (list.get(cars.get(cars.size()-1)).student3);
+		return((list.get(cars.get(cars.size()-1)).students));
 	}
 
 	

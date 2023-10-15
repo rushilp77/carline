@@ -270,10 +270,13 @@ public class runner extends JFrame implements ActionListener {
 			 
 			if(checkdigit.check(y)) {
 			
-			if((x<scanner.list.size()&&x>0)||x==999) {
+			if((x<(scanner.list.size()+100)&&x>0)||x==999) {
 				if(y!=prev) {
-					cone.cars.add(x-1);
+					cone.cars.add(x-101);
 					l.addElement((x)+" " +sam.returnLast());
+					if(cone.cars.size()<=12) {
+						refresh();
+					}
 					sound.playScan(x);
 				}
 				else
@@ -292,13 +295,12 @@ public class runner extends JFrame implements ActionListener {
 					System.out.println("Your scan is not a number!");
 				}
 		prev=y;
-		if(cone.cars.size()<=12) {
-			refresh();
-		}
+		
 		}
 	
 	public void remove() {
 		for(int i=0; i<6; i++) {
+			if(l.size()>0)
 			l.remove(0);
 		}
 		sam.remove();

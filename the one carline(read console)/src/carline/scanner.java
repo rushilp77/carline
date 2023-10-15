@@ -9,21 +9,13 @@ public class scanner {
 	
 	
 	public static void begin() throws Exception {
-		Scanner sc= new Scanner(new BufferedReader(new FileReader("C:\\Users\\patel\\Downloads\\demo.csv")));
-		sc.useDelimiter(",");
+		Scanner sc= new Scanner(new BufferedReader(new FileReader("C:\\Users\\patel\\Downloads\\Firstnamelist.csv")));
 		sc.nextLine();
 
 		while(sc.hasNextLine()) {
 			String each = sc.nextLine();
-		String[] record = each.split(",");
-		if (record.length == 2)
-			list.add(new family(record[1]));
 		
-		else if (record.length == 3)
-			list.add(new family(record[1], record[2]));
-
-		else if (record.length == 4)
-			list.add(new family(record[1], record[2], record[3]));
+			list.add(new family(each));
 
 		}
 		sc.close();  //closes the scanner	
